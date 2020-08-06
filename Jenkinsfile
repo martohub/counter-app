@@ -12,6 +12,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
+                sh 'chmod +x ./jenkins/scripts/test.sh'
+                sh 'chmod +x ./jenkins/scripts/deliver.sh'
+                sh 'chmod +x ./jenkins/scripts/kill.sh'
             }
         }
         stage('Test') {
